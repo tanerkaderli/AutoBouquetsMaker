@@ -1,0 +1,15 @@
+<custommix>
+	<hacks>
+<![CDATA[
+
+for service in sorted(services[section_identifier]["video"].keys()):
+	if service in range(1,1000):
+		if "interactive_name" in services[section_identifier]["video"][service]:
+			services[section_identifier]["video"][service]["interactive_name"] = str(services[section_identifier]["video"][service]["number"]) + " - " + services[section_identifier]["video"][service]["interactive_name"]
+		else:
+			services[section_identifier]["video"][service]["interactive_name"] = str(services[section_identifier]["video"][service]["number"]) + " - " + services[section_identifier]["video"][service]["service_name"]
+
+]]>
+
+	</hacks>
+</custommix>

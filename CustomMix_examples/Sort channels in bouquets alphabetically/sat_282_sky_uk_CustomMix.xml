@@ -1,0 +1,27 @@
+<custommix>
+	<hacks>
+<![CDATA[
+
+section_numbers = sorted(sections.keys())
+for this_section in section_numbers:
+	if section_numbers.index(this_section)+1 < len(section_numbers):#this_section < 1000:
+		next_section = section_numbers[section_numbers.index(this_section)+1]
+	else:
+		next_section = 65535
+	sort_list = []
+	for service in sorted(customised["video"].keys()):
+		if service in range(this_section, next_section):
+			if 'interactive_name' in customised["video"][service]:
+				sort_list.append((customised["video"][service], re.sub('^(?![a-z])', 'zzzzz', customised["video"][service]['interactive_name'].lower())))
+			else:
+				sort_list.append((customised["video"][service], re.sub('^(?![a-z])', 'zzzzz', customised["video"][service]['service_name'].lower())))
+			del customised["video"][service]
+	sort_list = sorted(sort_list, key=lambda listItem: listItem[1])
+	i = this_section
+	for service in sort_list:
+		customised["video"][i] = service[0]
+		i += 1
+
+]]>
+	</hacks>
+</custommix>

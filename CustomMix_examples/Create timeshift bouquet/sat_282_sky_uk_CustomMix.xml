@@ -1,0 +1,38 @@
+<custommix>
+	<hacks>
+<![CDATA[
+
+timeshift = []
+rest = []
+last_section = max(sections.keys())
+last_section_name = sections[last_section]
+
+for service in sorted(services["sat_282_sky_uk"]["video"].keys()):
+	if service in range(last_section, 1450):
+		rest.append(services["sat_282_sky_uk"]["video"][service])
+	elif service < 1000 and ("+1" in services["sat_282_sky_uk"]["video"][service]["service_name"] or "+2" in services["sat_282_sky_uk"]["video"][service]["service_name"]):
+		timeshift.append(services["sat_282_sky_uk"]["video"][service])
+
+i = last_section
+sections[i] = "Timeshift"
+
+sort_list = []
+for x in timeshift:
+	sort_list.append((x, re.sub('^(?![a-z])', 'zzzzz', x['service_name'].lower())))
+sort_list = sorted(sort_list, key=lambda listItem: listItem[1])
+for service in sort_list:
+	customised["video"][i] = service[0]
+	i += 1
+
+sections[i] = last_section_name
+sort_list = []
+for x in rest:
+	sort_list.append((x, re.sub('^(?![a-z])', 'zzzzz', x['service_name'].lower())))
+sort_list = sorted(sort_list, key=lambda listItem: listItem[1])
+for service in sort_list:
+	customised["video"][i] = service[0]
+	i += 1
+
+]]>
+	</hacks>
+</custommix>

@@ -322,6 +322,7 @@
 		<channel number="601" with="640"/> <!-- Cartoon Network HD -->
 		<channel number="603" with="641"/> <!-- Boomerang HD -->
 		<channel number="604" with="642"/> <!-- Nickelodeon HD -->
+		<channel number="606" with="645"/> <!-- Nick Jr HD -->
 		<channel number="607" with="643"/> <!-- CBBC HD -->
 		<channel number="608" with="644"/> <!-- CBeebies HD -->
 		<channel number="615" with="648"/> <!-- Nick Jr. HD -->

@@ -157,7 +157,7 @@ except:
 	}
 
 	rename_by_sid = {
-		52575: "Freesports HD",
+		51118: "WildEarth HD",
 	}
 
 	skiplist = ["Channel moved",]

@@ -298,7 +298,7 @@ except:
 	}
 
 	rename_by_sid = {
-		53710: "NBC News NOW HD",
+		51118: "WildEarth HD",
 	}
 
 	whitelist = ['ITV HD',752,]

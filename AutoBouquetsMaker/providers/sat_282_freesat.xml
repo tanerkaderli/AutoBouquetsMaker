@@ -33,7 +33,7 @@
 		<configuration key="hd_freesat_110_c" bouquet="0x110" region="0xc">BBC Yorkshire/ITV Tyne Tees S</configuration>
 		<configuration key="hd_freesat_110_d" bouquet="0x110" region="0xd">BBC E Midlands/ITV Central E</configuration>
 		<configuration key="hd_freesat_110_e" bouquet="0x110" region="0xe">BBC E Midlands/ITV Central W</configuration>
-		<configuration key="hd_freesat_110_f" bouquet="0x110" region="0xf">BBC E Midlands/ITV Central E</configuration>
+		<!-- configuration key="hd_freesat_110_f" bouquet="0x110" region="0xf">BBC E Midlands/ITV Central E</configuration --><!-- sequence in this bouquet is duplicated in hd_freesat_110_d -->
 		<configuration key="hd_freesat_110_10" bouquet="0x110" region="0x10">BBC E Midlands/ITV Yorkshire E</configuration>
 		<configuration key="hd_freesat_110_11" bouquet="0x110" region="0x11">BBC East (E)/ITV Anglia S</configuration>
 		<configuration key="hd_freesat_110_12" bouquet="0x110" region="0x12">BBC East (E)/ITV London</configuration>
@@ -41,7 +41,7 @@
 		<configuration key="hd_freesat_110_14" bouquet="0x110" region="0x14">BBC West/Westcountry W</configuration>
 		<configuration key="hd_freesat_110_15" bouquet="0x110" region="0x15">BBC West/ITV Westcountry W</configuration>
 		<configuration key="hd_freesat_110_16" bouquet="0x110" region="0x16">BBC West/ITV Meridian Thames Valley</configuration>
-		<configuration key="hd_freesat_110_17" bouquet="0x110" region="0x17">BBC West/ITV Meridian Thames Valley</configuration>
+		<!-- configuration key="hd_freesat_110_17" bouquet="0x110" region="0x17">BBC West/ITV Meridian Thames Valley</configuration --><!-- sequence in this bouquet is duplicated in hd_freesat_110_16 -->
 		<configuration key="hd_freesat_110_18" bouquet="0x110" region="0x18">BBC S East/ITV Meridian S</configuration>
 		<configuration key="hd_freesat_110_19" bouquet="0x110" region="0x19">BBC S East/ITV Meridian SE</configuration>
 		<configuration key="hd_freesat_110_1a" bouquet="0x110" region="0x1a">BBC S East/ITV Meridian E</configuration>

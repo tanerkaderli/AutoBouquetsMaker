@@ -42,6 +42,9 @@ class ProviderConfig():
 	def isMakeNormalMain(self):
 		return (self.flags & 0x03) == 0x01
 
+	def isMakeNormalMainOnly(self):
+		return (self.flags & 0xdf) == 0x01
+
 	def isMakeCustomMain(self):
 		return (self.flags & 0x03) == 0x02
 

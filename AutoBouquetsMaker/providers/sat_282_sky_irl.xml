@@ -265,10 +265,6 @@ except:
 		5384: "TNT Sports 8",
 		5385: "TNT Sports 9",
 		5386: "TNT Sports 10",
-
-		# Other channels
-		2079: "BBC One HD",
-
 	}
 
 	BBC_RB = {

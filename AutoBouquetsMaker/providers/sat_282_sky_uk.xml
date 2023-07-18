@@ -226,7 +226,7 @@
 		<section number="993">Sky Info</section>
 		<section number="1000">Sky Sports Interactive</section>
 		<section number="1020">Sky Anytime</section>
-		<section number="1030">BT Sports Interactive</section>
+		<section number="1030">TNT Sports Interactive</section>
 		<section number="1050">Not indexed</section>
 	</sections>
 
@@ -305,13 +305,13 @@
 		<channel number="409" with="867"/> <!-- SkySp News HD -->
 		<channel number="410" with="868"/> <!-- Eurosport 1 HD -->
 		<channel number="411" with="869"/> <!-- Eurosport 2 HD -->
-		<channel number="413" with="870"/> <!-- BT Sport1 HD -->
-		<channel number="414" with="871"/> <!-- BT Sport2 HD -->
+		<channel number="413" with="870"/> <!-- TNT Sports1 HD -->
+		<channel number="414" with="871"/> <!-- TNT Sport2 HD -->
 		<channel number="415" with="872"/> <!-- Sky Sports Racing HD -->
 		<channel number="416" with="873"/> <!-- SkySp Mix HD -->
-		<channel number="417" with="874"/> <!-- BT Sport3 HD -->
+		<channel number="417" with="874"/> <!-- TNT Sports3 HD -->
 		<channel number="418" with="875"/> <!-- MUTV HD -->
-		<channel number="423" with="876"/> <!-- BT Sport4 HD -->
+		<channel number="423" with="876"/> <!-- TNT Sports4 HD -->
 		<channel number="426" with="877"/> <!-- Racing TV HD -->
 		<channel number="501" with="881"/> <!-- Sky News HD -->
 		<channel number="503" with="882"/> <!-- BBC News HD -->
@@ -422,13 +422,14 @@ except:
 	}
 
 	rename = {
-		# BT Interactive
-		5381: "BT Sport Mosaic 2",
-		5382: "BT Sport 6",
-		5383: "BT Sport 7",
-		5384: "BT Sport 8",
-		5385: "BT Sport 9",
-		5386: "BT Sport 10",
+		# TNT Interactive
+		5030: "TNT Sports Mosaic",
+		5381: "TNT Sports Mosaic 2",
+		5382: "TNT Sports 6",
+		5383: "TNT Sports 7",
+		5384: "TNT Sports 8",
+		5385: "TNT Sports 9",
+		5386: "TNT Sports 10",
 	}
 
 	rename_by_id_conditional = { # channel ID: ("old name", "new name")
@@ -460,11 +461,10 @@ except:
 		9800, # ___4110
 	]
 
-	bt_sports_id = [5030,5381,5031,5382,5383,5384,5385,5386]
+	tnt_sports_id = [5030,5381,5031,5382,5383,5384,5385,5386]
 
 #Some channels are encrypted, but they incorrectly have FTA flag.
 	encrypted_by_id = [
-		5036, # AMC from BT
 		1024, # 10002
 		1027, # 10001
 	]
@@ -571,8 +571,8 @@ for number in service["numbers"]:
 		elif service["channel_id"] > 4093 and service["channel_id"] < 4099: # Sky Anytime
 			new_numbers.append(service["channel_id"] - 3074)
 			service["interactive_name"] = "Sky Anytime " + str(service["channel_id"])
-		elif service["channel_id"] in bt_sports_id:
-			new_numbers.append(1030 + bt_sports_id.index(service["channel_id"]))
+		elif service["channel_id"] in tnt_sports_id:
+			new_numbers.append(1030 + tnt_sports_id.index(service["channel_id"]))
 		elif service["channel_id"] == 1151 and service["original_network_id"] == 2 and service["transport_stream_id"] == 2004: # IEPG Data channel
 			#service["flags"] = dxNoSDT | dxHoldName
 			#service["service_name"] = "Sky UK EPG data channel"

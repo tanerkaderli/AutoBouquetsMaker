@@ -61,9 +61,13 @@ class Tools():
 					servicename = unicode(services[type][number]["service_name"], errors='ignore')
 				else:
 					servicename = six.ensure_text(services[type][number]["service_name"], encoding='utf-8', errors='ignore')
-				xml_out_list.append("\t\t<configuration lcn=\"%d\" channelnumber=\"%d\" description=\"%s\"></configuration>\n" % (
+				service_id = services[type][number]["service_id"]
+				channel_id = ("channelid=\"%d\" " % services[type][number]["channel_id"]) if "channel_id" in services[type][number] else ""
+				xml_out_list.append("\t\t<configuration lcn=\"%d\" channelnumber=\"%d\" serviceid=\"%d\" %sdescription=\"%s\"></configuration>\n" % (
 					number,
 					number,
+					service_id,
+					channel_id,
 					servicename.replace("&", "+")
 				))
 			xml_out_list.append("\t</lcnlist>\n</custom>\n")

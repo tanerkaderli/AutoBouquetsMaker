@@ -512,11 +512,14 @@ class DvbScanner():
 		logical_channel_number_dict = {}
 
 		for service in bat_content:
-			if service["descriptor_tag"] != descriptor_tag:
+			if service["descriptor_tag"] not in descriptor_tag:  # descriptor_tag is a list
 				continue
 
 			key = "%x:%x:%x" % (service["transport_stream_id"], service["original_network_id"], service["service_id"])
 			TSID_ONID = "%x:%x" % (service["transport_stream_id"], service["original_network_id"])
+
+			if key in logical_channel_number_dict and service["descriptor_tag"] != descriptor_tag[0]: # priority first descriptor_tag
+				continue
 
 			logical_channel_number_dict[key] = service
 			if TSID_ONID not in tmp_TSID_ONID_list:
@@ -950,7 +953,7 @@ class DvbScanner():
 				transport_stream_id_list.append(service["transport_stream_id"])
 
 			key = "%x:%x:%x" % (service["transport_stream_id"], service["original_network_id"], service["service_id"])
-			if service["region_id"] != region_id and service["region_id"] != 0xff:
+			if service["region_id"] not in region_id and service["region_id"] != 0xff:  # region_id is a list
 				if extraservices and key not in extra_channel_id_dict:
 					extra_channel_id_dict[key] = service["channel_id"]
 				continue
@@ -1193,7 +1196,7 @@ class DvbScanner():
 			if service["transport_stream_id"] not in transport_stream_id_list:
 				transport_stream_id_list.append(service["transport_stream_id"])
 
-			if service["region_id"] != region_id and service["region_id"] != 0xffff:
+			if service["region_id"] not in region_id and service["region_id"] != 0xffff:  # region_id is a list
 				continue
 
 			service["service_type"] = 1

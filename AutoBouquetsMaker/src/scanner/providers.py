@@ -217,7 +217,8 @@ class Providers():
 									elif node2.attributes.item(i).name == "bouquet":
 										configuration["bouquet"] = int(node2.attributes.item(i).value, 16)
 									elif node2.attributes.item(i).name == "region":
-										configuration["region"] = int(node2.attributes.item(i).value, 16)
+										# allow region to be a list of values (e.g. so we can accept both SD and HD descriptors)
+										configuration["region"] = list(map(lambda x: int(x.strip(), 16), node2.attributes.item(i).value.split(",")))
 
 								node2.normalize()
 								if len(node2.childNodes) == 1 and node2.childNodes[0].nodeType == node2.TEXT_NODE:

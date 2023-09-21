@@ -4,6 +4,8 @@ from .. import log
 import os
 import xml.dom.minidom
 import six
+from time import mktime
+from datetime import datetime
 try:
 	import cPickle as pickle
 except:
@@ -11,6 +13,8 @@ except:
 from enigma import eDVBFrontendParametersSatellite, eDVBFrontendParametersTerrestrial, eDVBFrontendParametersCable
 
 from Tools.Directories import resolveFilename, SCOPE_CONFIG
+
+minimum_cache_date = mktime(datetime.strptime("21/09/2023", "%d/%m/%Y").timetuple())  # allows us to force a cache update
 
 
 class Providers():
@@ -70,11 +74,15 @@ class Providers():
 			if filetime > newest:
 				newest = filetime
 		try:
-			if os.path.exists(cachefile) and os.path.getmtime(cachefile) > newest:
-				with open(cachefile, 'rb') as cache_input:
-					providers = pickle.load(cache_input)
-					cache_input.close()
-					return providers
+			if os.path.exists(cachefile):
+				mtime = os.path.getmtime(cachefile)
+				if mtime < minimum_cache_date:
+					os.remove(cachefile)
+				elif mtime > newest:
+					with open(cachefile, 'rb') as cache_input:
+						providers = pickle.load(cache_input)
+						cache_input.close()
+						return providers
 		except:
 			pass
 

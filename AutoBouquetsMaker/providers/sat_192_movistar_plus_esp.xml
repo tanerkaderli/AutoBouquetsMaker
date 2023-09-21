@@ -47,12 +47,14 @@
 <![CDATA[
 
 # Remove invalid channels
-blacklist = (
+blacklist_name = (
 			".",
 			"TEST TÉCNICO"
             )
 
-if service["number"] > 500 or service["service_name"] in blacklist:
+blacklist_sid = [30516]
+
+if service["number"] > 500 or service["service_name"] in blacklist_name or service["service_id"] in blacklist_sid:
 	skip.skip = True
 
 ]]>

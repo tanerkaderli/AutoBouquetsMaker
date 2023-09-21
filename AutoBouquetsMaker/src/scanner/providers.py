@@ -16,6 +16,7 @@ from Tools.Directories import resolveFilename, SCOPE_CONFIG
 class Providers():
 	VALID_PROTOCOLS = ("fastscan", "freesat", "lcn", "lcn2", "lcnbat", "lcnbat2", "nolcn", "sky", "vmuk", "vmuk2")
 	PROVIDERS_DIR = os.path.dirname(__file__) + "/../providers"
+	USER_PROVIDERS_DIR = os.path.realpath(resolveFilename(SCOPE_CONFIG)) + "/AutoBouquetsMaker/providers"
 
 	def encodeNODE(self, data):
 		if six.PY2:
@@ -40,16 +41,16 @@ class Providers():
 		return dom
 
 	def getProviderPaths(self):
-		user_providers_dir = os.path.realpath(resolveFilename(SCOPE_CONFIG)) + "/AutoBouquetsMaker/providers"
+		self.USER_PROVIDERS_DIR = os.path.realpath(resolveFilename(SCOPE_CONFIG)) + "/AutoBouquetsMaker/providers"
 		paths_dict = {}
 		for filename in os.listdir(self.PROVIDERS_DIR):
 			if filename[-4:] != ".xml":
 				continue
 			paths_dict[filename] = self.PROVIDERS_DIR + "/" + filename
-		for filename in os.listdir(user_providers_dir):  # user files take priority
+		for filename in os.listdir(self.USER_PROVIDERS_DIR):  # user files take priority
 			if filename[-4:] != ".xml":
 				continue
-			paths_dict[filename] = user_providers_dir + "/" + filename
+			paths_dict[filename] = self.USER_PROVIDERS_DIR + "/" + filename
 		return paths_dict
 
 	def providerFileExists(self, name):

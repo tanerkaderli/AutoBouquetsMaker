@@ -17,8 +17,6 @@ from enigma import eTimer
 from .skin_templates import skin_setup
 from .scanner.manager import Manager
 from .scanner.providerconfig import ProviderConfig
-from . import log
-import itertools
 import six
 if six.PY3:
 	import unicodedata
@@ -320,7 +318,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 					if self.providers_makeftahd[provider] and (self.providers_makemain[provider] is None or self.providers_makemain[provider].value != "ftahd") and not self.providers_FTA_only[provider].value:
 						self.list.append(getConfigListEntry(indent + _("Create FTA HD bouquet"), self.providers_makeftahd[provider], _("This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet.")))
 
-					if ((self.providers_makemain[provider] and self.providers_makemain[provider].value == "yes") or (self.providers_makesections[provider] and self.providers_makesections[provider].value == True)) and len(self.providers[provider]["swapchannels"]) > 0:
+					if ((self.providers_makemain[provider] and self.providers_makemain[provider].value == "yes") or (self.providers_makesections[provider] and self.providers_makesections[provider].value is True)) and len(self.providers[provider]["swapchannels"]) > 0:
 						self.list.append(getConfigListEntry(indent + _("Swap channels"), self.providers_swapchannels[provider], _("This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)")))
 
 				providers_enabled.append(provider)
@@ -477,10 +475,6 @@ class AutoBouquetsMaker_Setup(ConfigListScreen, Screen):
 
 	def prepare(self):
 		self.activityTimer.stop()
-		bouquets = Manager().getBouquetsList()
-		bouquets_list = []
-		bouquet_default = None
-
 		self.createSetup()
 		self["pleasewait"].hide()
 		self["actions"].setEnabled(True)

@@ -5,7 +5,6 @@ from __future__ import absolute_import
 from . import _
 
 from .scanner.main import AutoBouquetsMaker, AutoScheduleTimer
-from .scanner.manager import Manager
 from .about import AutoBouquetsMaker_About
 from .setup import AutoBouquetsMaker_Setup, AutoBouquetsMaker_ProvidersSetup
 from .hidesections import AutoBouquetsMaker_HideSections
@@ -30,7 +29,6 @@ from Tools.LoadPixmap import LoadPixmap
 
 from .skin_templates import skin_mainmenu, skin_log
 
-from time import localtime, time, strftime
 import os
 import sys
 from . import log
@@ -107,7 +105,7 @@ class AutoBouquetsMaker_Menu(Screen):
 
 	def buildListEntry(self, description, image):
 		pixmap = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "autobouquetsmaker/" + image))
-		if pixmap == None:
+		if pixmap is None:
 			pixmap = LoadPixmap(cached=True, path="%s/images/%s" % (os.path.dirname(sys.modules[__name__].__file__), image))
 		return ((pixmap, description))
 

@@ -113,7 +113,7 @@ class AutoBouquetsMaker_UpdateProviders(Screen):
 
 	def go(self):
 		if len(self.actionsList) > 0:
-			if self.version_checked == False:
+			if self.version_checked is False:
 				self["action"].setText(_('Starting update...'))
 				self["status"].setText(_("Checking version compatibility..."))
 				self.progresscount = len(self.actionsList)

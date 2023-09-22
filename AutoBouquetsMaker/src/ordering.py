@@ -5,7 +5,7 @@ from . import _
 
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
-from Components.config import getConfigListEntry, config, configfile
+from Components.config import config, configfile
 from Components.Sources.List import List
 from Components.ActionMap import ActionMap
 from Components.Button import Button

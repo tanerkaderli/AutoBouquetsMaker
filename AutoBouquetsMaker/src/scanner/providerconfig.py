@@ -15,7 +15,7 @@ class ProviderConfig():
 				self.area = str(chunks[1].strip())
 				self.flags = int(chunks[2].strip())
 				self.customfilename = str(chunks[3].strip())
-			except Exception as e:
+			except:
 				return
 
 	def isValid(self):

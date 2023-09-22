@@ -5,7 +5,6 @@ from .. import log
 import dvbreader
 import datetime
 import time
-import os
 from Components.config import config
 
 
@@ -259,7 +258,7 @@ class DvbScanner():
 					print("[ABM-DvbScanner] raw section above is from NIT other table.")
 				network_id = section["header"]["network_id"]
 
-				if network_id in nit_other_section_version and nit_other_section_version[network_id] == section["header"]["version_number"] and all(completed == True for completed in list(nit_other_completed.values())):
+				if network_id in nit_other_section_version and nit_other_section_version[network_id] == section["header"]["version_number"] and all(completed is True for completed in list(nit_other_completed.values())):
 					all_nit_others_completed = True
 				else:
 

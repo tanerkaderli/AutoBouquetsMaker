@@ -3,7 +3,6 @@ from __future__ import absolute_import
 
 from .. import log
 import os
-import codecs
 import re
 import xml.dom.minidom
 from Components.config import config
@@ -25,7 +24,7 @@ class Tools():
 	def parseXML(self, filename):
 		try:
 			tool = open(filename, "r")
-		except Exception as e:
+		except:
 			# print("[ABM-Tools][parseXML] Cannot open %s: %s" % (filename, e), file=log)
 			return None
 
@@ -328,7 +327,6 @@ class Tools():
 		bouquets = {"main": 1, "sections": 1}
 		area_key = ""
 		bouquets_to_hide = []
-		bouquetsToHide = []
 		swaprules = []
 		placement = 0
 		hacks = ""

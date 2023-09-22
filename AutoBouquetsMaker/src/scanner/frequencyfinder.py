@@ -19,7 +19,7 @@ import dvbreader
 from Plugins.SystemPlugins.AutoBouquetsMaker.skin_templates import skin_downloadBar
 
 import os
-import errno
+# import errno
 import sys
 import re
 
@@ -185,7 +185,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 			self["action"].setText(_("Tuning %s MHz (ch %s)") % (str(self.frequency // 1000000), getChannelNumber(self.frequency)))
 			self["status"].setText(ngettext("Found %d unique transponder", "Found %d unique transponders", len(self.transponders_unique)) % len(self.transponders_unique))
 			self.index += 1
-			if self.frequency in self.transponders_found or self.system == eDVBFrontendParametersTerrestrial.System_DVB_T2 and self.isT2tuner == False:
+			if self.frequency in self.transponders_found or self.system == eDVBFrontendParametersTerrestrial.System_DVB_T2 and self.isT2tuner is False:
 				print("[ABM-FrequencyFinder][Search] Skipping T2 search of %s MHz (ch %s)" % (str(self.frequency // 1000000), getChannelNumber(self.frequency)))
 				self.search()
 				return

@@ -143,14 +143,6 @@ class Manager():
 				if self.addprefix:
 					prefix = providers[provider_key]["name"]
 
-				current_bouquet_key = self.providerConfigs[provider_key].getArea()
-				if current_bouquet_key in providers[provider_key]["bouquets"] and providers[provider_key]["protocol"] in ("sky", "freesat"):
-					current_bouquet = providers[provider_key]["bouquets"][current_bouquet_key]["bouquet"]
-					current_region = providers[provider_key]["bouquets"][current_bouquet_key]["region"]
-				else:
-					current_bouquet = -1
-					current_region = -1
-
 				# swap services between providers
 				services, providers[provider_key]["sections"] = Tools().customMix(self.services, provider_key, providers, self.providerConfigs[provider_key])
 

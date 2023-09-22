@@ -8,7 +8,7 @@ from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Components.ActionMap import ActionMap
 from Components.Label import Label
-from Components.Pixmap import Pixmap
+# from Components.Pixmap import Pixmap
 from Components.ProgressBar import ProgressBar
 from Components.Sources.Progress import Progress
 from Components.Sources.FrontendStatus import FrontendStatus
@@ -24,10 +24,10 @@ from Plugins.SystemPlugins.AutoBouquetsMaker.skin_templates import skin_download
 from time import localtime, time, strftime, mktime
 
 from .. import log
-import os
-import sys
+# import os
+# import sys
 
-from Tools.Directories import resolveFilename, fileExists, SCOPE_CURRENT_SKIN
+# from Tools.Directories import resolveFilename, fileExists, SCOPE_CURRENT_SKIN
 
 
 class AutoBouquetsMaker(Screen):
@@ -737,7 +737,7 @@ class AutoScheduleTimer:
 
 	def runscheduleditemCallback(self):
 		global wasScheduleTimerWakeup
-		from Screens.Standby import Standby, inStandby, TryQuitMainloop, inTryQuitMainloop
+		from Screens.Standby import inStandby, TryQuitMainloop, inTryQuitMainloop
 		print("[%s][runscheduleditemCallback] inStandby" % self.schedulename, inStandby, file=log)
 		if wasScheduleTimerWakeup and inStandby and self.config.scheduleshutdown.value and not self.session.nav.getRecordings() and not inTryQuitMainloop:
 			print("[%s] Returning to deep standby after scheduled wakeup" % self.schedulename, file=log)

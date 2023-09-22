@@ -12,7 +12,7 @@ from Tools.Directories import resolveFilename, SCOPE_CONFIG
 from .menu import AutoBouquetsMaker_Menu
 from .scanner.main import Scheduleautostart, AutoBouquetsMaker
 
-from Components.config import config, configfile, ConfigSubsection, ConfigYesNo, ConfigSelection, ConfigText, ConfigNumber, NoSave, ConfigClock, getConfigListEntry, ConfigEnableDisable, ConfigSubDict
+from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigSelection, ConfigText, ConfigNumber, NoSave, ConfigClock, ConfigEnableDisable, ConfigSubDict
 config.autobouquetsmaker = ConfigSubsection()
 config.autobouquetsmaker.level = ConfigSelection(default="expert", choices=[("simple", _("simple")), ("expert", _("expert"))])
 config.autobouquetsmaker.level.value = "expert"  # force to expert mode for all users

@@ -325,7 +325,7 @@ class BouquetsWriter():
 
 		try:
 			bouquet_in = open(path + "/" + filename, "r")
-		except Exception as e:
+		except:
 			print("[ABM-BouquetsWriter] ", e, file=log)
 			return
 
@@ -335,7 +335,7 @@ class BouquetsWriter():
 		seperator_name = "/%s%s.separator.tv" % (self.ABM_BOUQUET_PREFIX, filename[:len(filename) - 3])
 		try:
 			bouquet_out = open(path + seperator_name, "w")
-		except Exception as e:
+		except:
 			print("[ABM-BouquetsWriter] ", e, file=log)
 			return
 
@@ -381,7 +381,7 @@ class BouquetsWriter():
 			content = bouquets.read().strip().split("\n")
 			bouquets.close()
 			return len(content) > 2
-		except Exception as e:
+		except:
 			return False
 
 	def containServicesLines(self, path, filename):
@@ -395,7 +395,7 @@ class BouquetsWriter():
 					return True
 					break
 			return False
-		except Exception as e:
+		except:
 			return False
 
 	def buildBouquetsIndex(self, path, bouquetsOrder, providers, bouquetsToKeep, currentBouquets, bouquets_to_hide, provider_configs):
@@ -533,7 +533,7 @@ class BouquetsWriter():
 
 				try:
 					os.remove(path + "/" + filename)
-				except Exception as e:
+				except:
 					print("[ABM-BouquetsWriter] Cannot delete %s: %s" % (filename, e), file=log)
 					continue
 		print("[ABM-BouquetsWriter] Done", file=log)

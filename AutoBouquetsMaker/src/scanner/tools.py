@@ -57,7 +57,7 @@ class Tools():
 			numbers = sorted(list(services[type].keys()))
 			for number in numbers:
 				if six.PY2:
-					servicename = unicode(services[type][number]["service_name"], errors='ignore')
+					servicename = unicode(services[type][number]["service_name"], errors='ignore')  # noqa: F821
 				else:
 					servicename = six.ensure_text(services[type][number]["service_name"], encoding='utf-8', errors='ignore')
 				service_id = services[type][number]["service_id"]

@@ -51,9 +51,8 @@ class AutoBouquetsMaker_Menu(Screen):
 		print('[ABM-menu][__init__] self.init_scheduletime', self.init_scheduletime)
 
 		self.onChangedEntry = []
-		l = []
 
-		self["list"] = List(l)
+		self["list"] = List([])
 
 		self["setupActions"] = ActionMap(["ColorActions", "SetupActions", "MenuActions"],
 		{
@@ -71,23 +70,23 @@ class AutoBouquetsMaker_Menu(Screen):
 			self.onFirstExecBegin.append(self.openSetup)
 
 	def createsetup(self):
-		l = []
-		l.append(self.buildListEntry(_("Configure"), "configure.png"))
-		l.append(self.buildListEntry(_("Providers"), "opentv.png"))
+		setupList = []
+		setupList.append(self.buildListEntry(_("Configure"), "configure.png"))
+		setupList.append(self.buildListEntry(_("Providers"), "opentv.png"))
 		if len(config.autobouquetsmaker.providers.getValue().split('|')) > 1:
-			l.append(self.buildListEntry(_("Providers order"), "reorder.png"))
+			setupList.append(self.buildListEntry(_("Providers order"), "reorder.png"))
 		if len(config.autobouquetsmaker.providers.getValue().split('|')) > 0:
-			l.append(self.buildListEntry(_("Hide sections"), "reorder.png"))
+			setupList.append(self.buildListEntry(_("Hide sections"), "reorder.png"))
 		if not config.autobouquetsmaker.keepallbouquets.value:
-			l.append(self.buildListEntry(_("Keep bouquets"), "reorder.png"))
-		l.append(self.buildListEntry(_("Start scan"), "download.png"))
-		l.append(self.buildListEntry(_("Delete ABM bouquets"), "reorder.png"))
-		l.append(self.buildListEntry(_("Update provider files"), "reorder.png"))
+			setupList.append(self.buildListEntry(_("Keep bouquets"), "reorder.png"))
+		setupList.append(self.buildListEntry(_("Start scan"), "download.png"))
+		setupList.append(self.buildListEntry(_("Delete ABM bouquets"), "reorder.png"))
+		setupList.append(self.buildListEntry(_("Update provider files"), "reorder.png"))
 		if config.autobouquetsmaker.level.getValue() == "expert" and config.autobouquetsmaker.frequencyfinder.getValue():
-			l.append(self.buildListEntry(_("DVB-T frequency finder"), "reorder.png"))
-		l.append(self.buildListEntry(_("Show log"), "dbinfo.png"))
-		l.append(self.buildListEntry(_("About"), "about.png"))
-		self["list"].list = l
+			setupList.append(self.buildListEntry(_("DVB-T frequency finder"), "reorder.png"))
+		setupList.append(self.buildListEntry(_("Show log"), "dbinfo.png"))
+		setupList.append(self.buildListEntry(_("About"), "about.png"))
+		self["list"].list = setupList
 
 	# for summary:
 	def changedEntry(self):

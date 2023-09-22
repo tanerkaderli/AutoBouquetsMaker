@@ -325,7 +325,7 @@ class BouquetsWriter():
 
 		try:
 			bouquet_in = open(path + "/" + filename, "r")
-		except:
+		except Exception as e:
 			print("[ABM-BouquetsWriter] ", e, file=log)
 			return
 
@@ -335,7 +335,7 @@ class BouquetsWriter():
 		seperator_name = "/%s%s.separator.tv" % (self.ABM_BOUQUET_PREFIX, filename[:len(filename) - 3])
 		try:
 			bouquet_out = open(path + seperator_name, "w")
-		except:
+		except Exception as e:
 			print("[ABM-BouquetsWriter] ", e, file=log)
 			return
 
@@ -533,7 +533,7 @@ class BouquetsWriter():
 
 				try:
 					os.remove(path + "/" + filename)
-				except:
+				except Exception as e:
 					print("[ABM-BouquetsWriter] Cannot delete %s: %s" % (filename, e), file=log)
 					continue
 		print("[ABM-BouquetsWriter] Done", file=log)

@@ -518,7 +518,7 @@ class DvbScanner():
 			key = "%x:%x:%x" % (service["transport_stream_id"], service["original_network_id"], service["service_id"])
 			TSID_ONID = "%x:%x" % (service["transport_stream_id"], service["original_network_id"])
 
-			if key in logical_channel_number_dict and service["descriptor_tag"] != descriptor_tag[0]: # priority first descriptor_tag
+			if key in logical_channel_number_dict and service["descriptor_tag"] != descriptor_tag[0]:  # priority first descriptor_tag
 				continue
 
 			logical_channel_number_dict[key] = service

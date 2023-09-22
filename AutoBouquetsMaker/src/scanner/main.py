@@ -468,8 +468,8 @@ class AutoBouquetsMaker(Screen):
 	def gotTsidOnid(self, tsid, onid):
 		print("[ABM-main][gotTsidOnid] tsid, onid:", tsid, onid, file=log)
 
-		INTERNAL_PID_STATUS_NOOP = 0
-		INTERNAL_PID_STATUS_WAITING = 1
+		INTERNAL_PID_STATUS_NOOP = 0  # noqa: F841
+		INTERNAL_PID_STATUS_WAITING = 1  # noqa: F841
 		INTERNAL_PID_STATUS_SUCCESSFUL = 2
 		INTERNAL_PID_STATUS_FAILED = 3
 

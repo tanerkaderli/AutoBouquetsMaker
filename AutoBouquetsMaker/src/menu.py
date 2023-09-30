@@ -201,7 +201,7 @@ class AutoBouquetsMaker_Menu(Screen):
 		if index == 10:
 			self.session.open(AutoBouquetsMaker_About)
 			return
-	
+
 	def keyNumberGlobal(self, number):
 		self.number = self.number * 10 + number
 		listLength = self["list"].count()

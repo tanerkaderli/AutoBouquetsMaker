@@ -17,7 +17,7 @@ from .scanner.frequencyfinder import AutoBouquetsMaker_FrequencyFinder
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 
-from Components.ActionMap import ActionMap
+from Components.ActionMap import ActionMap, NumberActionMap
 from Components.Button import Button
 from Components.config import config
 from Components.Sources.List import List
@@ -32,6 +32,8 @@ from .skin_templates import skin_mainmenu, skin_log
 import os
 import sys
 from . import log
+
+from enigma import eTimer
 
 
 class AutoBouquetsMaker_Menu(Screen):
@@ -54,14 +56,26 @@ class AutoBouquetsMaker_Menu(Screen):
 
 		self["list"] = List([])
 
-		self["setupActions"] = ActionMap(["ColorActions", "SetupActions", "MenuActions"],
+		self["setupActions"] = NumberActionMap(["SetupActions"],
 		{
-			"red": self.quit,
-			"green": self.startScan,
+			"menu": self.quit,
+			"save": self.startScan,
 			"cancel": self.quit,
 			"ok": self.openSelected,
-			"menu": self.quit,
+			"0": self.keyNumberGlobal,
+			"1": self.keyNumberGlobal,
+			"2": self.keyNumberGlobal,
+			"3": self.keyNumberGlobal,
+			"4": self.keyNumberGlobal,
+			"5": self.keyNumberGlobal,
+			"6": self.keyNumberGlobal,
+			"7": self.keyNumberGlobal,
+			"8": self.keyNumberGlobal,
+			"9": self.keyNumberGlobal,
 		}, -2)
+		self.number = 0
+		self.nextNumberTimer = eTimer()
+		self.nextNumberTimer.callback.append(self.openSelected)
 		self["key_red"] = Button(_("Exit"))
 		self["key_green"] = Button(_("Scan"))
 
@@ -126,6 +140,9 @@ class AutoBouquetsMaker_Menu(Screen):
 				self["list"].setIndex(0)
 
 	def openSelected(self):
+		if self.number:
+			self["list"].setIndex(self.number - 1)
+		self.resetNumberKey()
 
 		index = self["list"].getIndex()
 
@@ -184,6 +201,21 @@ class AutoBouquetsMaker_Menu(Screen):
 		if index == 10:
 			self.session.open(AutoBouquetsMaker_About)
 			return
+	
+	def keyNumberGlobal(self, number):
+		self.number = self.number * 10 + number
+		listLength = self["list"].count()
+		if self.number and self.number <= listLength:
+			if number * 10 > listLength or self.number >= 10:
+				self.openSelected()
+			else:
+				self.nextNumberTimer.start(1500, True)
+		else:
+			self.resetNumberKey()
+
+	def resetNumberKey(self):
+		self.nextNumberTimer.stop()
+		self.number = 0
 
 	def startScan(self):
 		self.session.open(AutoBouquetsMaker)

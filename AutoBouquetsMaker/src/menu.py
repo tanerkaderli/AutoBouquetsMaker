@@ -262,6 +262,8 @@ class AutoBouquetsMaker_Log(Screen):
 			"ok": self.cancel,
 			"up": self["list"].pageUp,
 			"down": self["list"].pageDown,
+			"left": self["list"].pageUp,
+			"right": self["list"].pageDown,
 			"menu": self.closeRecursive,
 			"green": self.save,
 		}, -2)

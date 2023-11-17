@@ -447,6 +447,11 @@ except:
 		1015, # LaLigaTV HD
 		1047, # Insight HD
 		1163, # eir Sport 1 HD
+		1372, # COLORS HD
+		3812, # TLC HD
+		3831, # MTV HD
+		4039, # Nick Jr. HD
+		4056, # ComedyCentHD
 		5152, # eir Sport 2 HD
 		5153, # Premier HD
 		5154, # eir Sport 2 HD

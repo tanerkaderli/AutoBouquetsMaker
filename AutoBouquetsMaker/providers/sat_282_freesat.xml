@@ -86,9 +86,7 @@
 		<section number="999">Freesat Info</section>
 	</sections>
 	<swapchannels>
-		<channel number="101" with="106" /><!-- BBC One HD -->
 		<channel number="103" with="111" /><!-- ITV HD -->
-		<channel number="104" with="126" /><!-- Channel 4 HD -->
 	</swapchannels>
 	<servicehacks>
 <![CDATA[

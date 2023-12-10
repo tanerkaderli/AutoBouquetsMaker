@@ -101,17 +101,18 @@ except:
 #The Sky ones are sorted by Channel IDs, Freesat and Sky Channel IDs are different!
 	itv_rename = {
 		# ITV regions
-		33772: "ITV1 Border Scotland",
+		1004: "ITV1 Border Scotland",
 		1011: "ITV1 London",
+#		1019: "ITV1 Wales",	#This is correct on stream, no need for rename.
 		1010: "ITV1 Granada",
-		33780: "ITV1 Meridian East",
+		1012: "ITV1 Meridian East",
 		1009: "ITV1 Channel Isles",
-		33791: "STV North",
-		33792: "STV West",
-#		33794: "UTV",	#This is correct on stream, no need for rename.
-		33776: "ITV1 Central West",
-		33876: "STV Tayside",
-		33793: "STV East",
+		1023: "STV North",
+		1024: "STV West",
+#		1026: "UTV",	#This is correct on stream, no need for rename.
+		1008: "ITV1 Central West",
+		1108: "STV Tayside",
+		1025: "STV East",
 
 		# +1 Channels
 		33797: "ITV1+1 Central West",
@@ -120,24 +121,24 @@ except:
 		33795: "ITV1+1 Meridian East",
 
 		# HD Channels
-		33883: "ITV1 Tyne Tees HD",
+		1115: "ITV1 Tyne Tees HD",
 		1116: "ITV1 Yorkshire West HD",
-		33882: "ITV1 Anglia East HD",
-		42784: "ITV1 Border England HD",
-		42786: "ITV1 West Country SW HD",
-		42785: "ITV1 West Country West HD",
-		33813: "ITV1 Meridian Thames Valley HD",
-		33812: "ITV1 Meridian South Coast HD",
-		33811: "ITV1 Yorkshire East HD",
-		33814: "ITV1 Anglia West HD",
-		33810: "ITV1 Central East HD",
-#		52777: "STV West HD",	#This is correct on stream, no need for rename.
+		1114: "ITV1 Anglia East HD",
+		10016: "ITV1 Border England HD",
+		10018: "ITV1 West Country SW HD",
+		10017: "ITV1 West Country West HD",
+		1045: "ITV1 Meridian Thames Valley HD",
+		1044: "ITV1 Meridian South Coast HD",
+		1043: "ITV1 Yorkshire East HD",
+		1046: "ITV1 Anglia West HD",
+		1042: "ITV1 Central East HD",
+#		20009: "STV West HD",	#This is correct on stream, no need for rename.
 #		10013: "ITV1 Wales HD",	#This is correct on stream, no need for rename.
-		42779: "ITV1 Meridian East HD",
-		42780: "ITV1 Central West HD",
+		10011: "ITV1 Meridian East HD",
+		10012: "ITV1 Central West HD",
 		10005: "ITV1 London HD",
-		42775: "ITV1 Granada HD",
-#		33808: "UTV HD",	#This is correct on stream, no need for rename.
+		10007: "ITV1 Granada HD",
+#		1040: "UTV HD",	#This is correct on stream, no need for rename.
 	}
 
 	rename = { # channel_id: service_name,

@@ -253,6 +253,8 @@ except:
 		1214: "ITV1 Yorkshire East HD",
 		1217: "ITV1 Anglia West HD",
 		1219: "ITV1 Central East HD",
+		3062: "ITV1 Channel Isles HD",
+		3063: "ITV1 Border Scotland HD",
 #		4055: "STV West HD",	#This is correct on stream, no need for rename.
 #		6501: "ITV1 Wales HD",	#This is correct on stream, no need for rename.
 		6502: "ITV1 Meridian East HD",

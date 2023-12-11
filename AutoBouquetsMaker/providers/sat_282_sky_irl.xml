@@ -55,7 +55,7 @@
 		<channel number="106" with="806"/> <!-- Sky Sky Showcase HD -->
 		<channel number="107" with="807"/> <!-- Sky Witness -->
 		<channel number="108" with="808"/> <!-- Sky Atlantic HD -->
-		<channel number="109" with="809"/> <!-- W HD -->
+		<channel number="109" with="809"/> <!-- Alibi HD -->
 		<channel number="110" with="810"/> <!-- GOLD HD -->
 		<channel number="111" with="811"/> <!-- Dave HD -->
 		<channel number="112" with="812"/> <!-- Comedy Central HD -->
@@ -72,14 +72,13 @@
 		<channel number="126" with="824"/> <!-- MTV HD -->
 		<channel number="129" with="825"/> <!-- Nat Geo HD -->
 		<channel number="130" with="826"/> <!-- Sky Arts HD -->
-		<channel number="132" with="827"/> <!-- Alibi HD -->
+		<channel number="132" with="827"/> <!-- W HD -->
 		<channel number="133" with="828"/> <!-- TLC HD -->
 		<channel number="134" with="829"/> <!-- S4C HD -->
 		<channel number="135" with="830"/> <!-- E4 HD -->
 		<channel number="136" with="831"/> <!-- More4 HD -->
 		<channel number="139" with="836"/> <!-- Sky Sci-Fi HD -->
 		<channel number="144" with="834"/> <!-- Quest HD -->
-		<channel number="151" with="835"/> <!-- E! HD -->
 		<channel number="152" with="836"/> <!-- Sky Sci-Fi HD -->
 		<channel number="155" with="846"/> <!-- YESTERDAY HD -->
 		<channel number="156" with="837"/> <!-- Crime+Inv HD -->
@@ -87,15 +86,12 @@
 		<channel number="163" with="840"/> <!-- Sky History 2 HD -->
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
 		<channel number="169" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
-		<channel number="171" with="843"/> <!-- Smithsonian HD -->
 		<channel number="187" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="301" with="848"/> <!-- SkyPremiereHD -->
 		<channel number="304" with="849"/> <!-- Sky Greats HD -->
 		<channel number="306" with="850"/> <!-- Sky Family HD -->
 		<channel number="307" with="851"/> <!-- Sky Action HD -->
-		<channel number="308" with="852"/> <!-- Sky Comedy Cinema HD -->
 		<channel number="310" with="854"/> <!-- Sky Drama HD -->
-		<channel number="309" with="853"/> <!-- Sky Thriller HD -->
 		<channel number="313" with="855"/> <!-- Film4 HD -->
 		<channel number="401" with="859"/> <!-- SkySpMainEvHD HD -->
 		<channel number="402" with="860"/> <!-- SkySp PL HD -->
@@ -115,7 +111,7 @@
 		<channel number="417" with="874"/> <!-- TNT Sports3 HD -->
 		<channel number="418" with="875"/> <!-- MUTV HD -->
 		<channel number="423" with="876"/> <!-- TNT Sports4 HD -->
-		<channel number="426" with="877"/> <!-- Racing TV HD -->
+		<channel number="424" with="877"/> <!-- Racing TV HD -->
 		<channel number="501" with="881"/> <!-- Sky News HD -->
 		<channel number="503" with="882"/> <!-- BBC News HD -->
 		<channel number="504" with="887"/> <!-- BBC Parliament HD -->
@@ -135,7 +131,6 @@
 		<channel number="709" with="898"/> <!-- Zee TV HD -->
 		<channel number="715" with="895"/> <!-- SONY MAX HD -->
 		<channel number="717" with="896"/> <!-- Utsav GOLD HD -->
-		<channel number="791" with="897"/> <!-- PCNE Chinese HD -->
 		<channel number="970" with="971" conditional="'BBC RB 1' in service_sd['service_name'] and 'BBC RB 1' in service_hd['service_name']"/> <!-- BBC RB 1 HD -->
 	</swapchannels>
 	<servicehacks>
@@ -211,15 +206,13 @@ except:
 		2085: 503, # BBC News HD
 		2072: 504, # BBC Parliament
 		2011: 823, # BBC News
-		2306: 811, # Dave FTA
 		4075: 812, # Channel 4 HD
 		6532: 816, # ITV2 HD
 		6533: 817, # ITV3 HD
 		#slow death section
 		3705: 112, # ComedyCentral
 		2709: 127, # ComedyXtra
-		1355: 415, # At the races
-		2418: 522, # ID
+		2418: 154, # ID
 		2517: 604, # Nicelodeon
 		5527: 606, # Nicktoons
 		3356: 615, # Nick Jr
@@ -319,9 +312,8 @@ except:
 	blacklist = ["10001", "10002"]
 
 	blacklist_by_id = [
-		2376, # Dave encrypted
-		9700, # ___4109
-		9800, # ___4110
+		1306, # ___4109
+		1307, # ___4110
 	]
 
 	tnt_sports_id = [5030,5381,5031,5382,5383,5384,5385,5386]

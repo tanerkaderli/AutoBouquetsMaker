@@ -183,7 +183,7 @@ except:
 		1032: 163, # 5Spike
 		3022: 150, # 5 USA
 		4058: 153, # Channel 5 HD
-		6508: 169, # ITVBe
+		3026: 169, # ITVBe HD
 		3023: 176, # 5STAR
 		3028: 200, # 5SELECT
 		6241: 218, # ITV2 +1

@@ -20,15 +20,15 @@
 	/>
 	<dvbsconfigs>
 		<configuration key="hd_freesat_110_1" bouquet="0x110" region="0x1">BBC London/ITV London</configuration>
-		<configuration key="hd_freesat_110_2" bouquet="0x110" region="0x2">BBC East (W)/ITV Anglia W</configuration>
+		<configuration key="hd_freesat_110_2" bouquet="0x110" region="0x2">BBC East (W)/ITV Anglia W 0x2</configuration>
 		<configuration key="hd_freesat_110_3" bouquet="0x110" region="0x3">BBC East (W)/ITV Central S</configuration>
-		<configuration key="hd_freesat_110_4" bouquet="0x110" region="0x4">BBC East (W)/ITV Anglia W</configuration>
+		<configuration key="hd_freesat_110_4" bouquet="0x110" region="0x4">BBC East (W)/ITV Anglia W 0x4</configuration>
 		<configuration key="hd_freesat_110_5" bouquet="0x110" region="0x5">BBC W Mids/ITV Central W</configuration>
 		<configuration key="hd_freesat_110_6" bouquet="0x110" region="0x6">BBC W Mids/ITV Central SW</configuration>
-		<configuration key="hd_freesat_110_7" bouquet="0x110" region="0x7">BBC N West/ITV Granada</configuration>
+		<configuration key="hd_freesat_110_7" bouquet="0x110" region="0x7">BBC N West/ITV Granada 0x7</configuration>
 		<configuration key="hd_freesat_110_8" bouquet="0x110" region="0x8">BBC N West/ITV BorderEng</configuration>
 		<configuration key="hd_freesat_110_9" bouquet="0x110" region="0x9">BBC EYrks&amp;Lin/ITV Yorkshire E</configuration>
-		<configuration key="hd_freesat_110_a" bouquet="0x110" region="0xa">BBC Yorkshire/ITV Yorkshire W</configuration>
+		<configuration key="hd_freesat_110_a" bouquet="0x110" region="0xa">BBC Yorkshire/ITV Yorkshire W 0xa</configuration>
 		<configuration key="hd_freesat_110_b" bouquet="0x110" region="0xb">BBC Yorkshire/ITV Yorkshire E</configuration>
 		<configuration key="hd_freesat_110_c" bouquet="0x110" region="0xc">BBC Yorkshire/ITV Tyne Tees S</configuration>
 		<configuration key="hd_freesat_110_d" bouquet="0x110" region="0xd">BBC E Midlands/ITV Central E</configuration>
@@ -57,10 +57,10 @@
 		<configuration key="hd_freesat_110_24" bouquet="0x110" region="0x24">BBC NE &amp; C/ITV Tyne Tees S</configuration>
 		<configuration key="hd_freesat_110_25" bouquet="0x110" region="0x25">BBC Oxford/ITV Central S</configuration>
 		<configuration key="hd_freesat_110_26" bouquet="0x110" region="0x26">BBC Oxford/ITV London</configuration>
-		<configuration key="hd_freesat_110_27" bouquet="0x110" region="0x27">BBC N West/ITV Granada</configuration>
-		<configuration key="hd_freesat_110_28" bouquet="0x110" region="0x28">BBC Yorkshire/ITV Yorkshire W</configuration>
+		<configuration key="hd_freesat_110_27" bouquet="0x110" region="0x27">BBC N West/ITV Granada 0x27</configuration>
+		<configuration key="hd_freesat_110_28" bouquet="0x110" region="0x28">BBC Yorkshire/ITV Yorkshire W 0x28</configuration>
 		<configuration key="hd_freesat_110_29" bouquet="0x110" region="0x29">BBC Channel Is/ITV Channel Is</configuration>
-		<configuration key="hd_freesat_110_2a" bouquet="0x110" region="0x2a">BBC Yorkshire/ITV Yorkshire W</configuration><!-- West -->
+		<configuration key="hd_freesat_110_2a" bouquet="0x110" region="0x2a">BBC Yorkshire/ITV Yorkshire W 0x2a</configuration><!-- West -->
 		<configuration key="hd_freesat_110_2b" bouquet="0x110" region="0x2b">BBC Isle of Man</configuration>
 		<configuration key="hd_freesat_111_3c" bouquet="0x111" region="0x3c">BBC Scotland/STV North</configuration>
 		<configuration key="hd_freesat_111_3d" bouquet="0x111" region="0x3d">BBC Scotland/STV Tayside</configuration>

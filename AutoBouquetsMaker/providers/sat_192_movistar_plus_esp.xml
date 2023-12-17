@@ -1,5 +1,5 @@
 <provider>
-	<name>Movistar+ Esp</name>
+	<name>Movistar+</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcnbat2</protocol>
 	<transponder

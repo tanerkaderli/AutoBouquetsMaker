@@ -172,8 +172,8 @@ except:
 	channels_to_add_by_id = {
 		2012: 115, # BBC ALBA
 		6240: 118, # ITV2
-		6260: 119, # ITV3
-		6272: 120, # ITV4
+		6533: 119, # ITV3 HD
+		6534: 120, # ITV4 HD
 		6504: 128, # ITV HD
 		6510: 131, # UTV HD
 		3150: 138, # 4seven
@@ -202,11 +202,9 @@ except:
 		1877: 362, # Magic
 		1853: 363, # Kerrang!
 		2085: 503, # BBC News HD
-		2072: 504, # BBC Parliament
-		2011: 823, # BBC News
+		3020: 504, # BBC Parliament HD
 		4075: 812, # Channel 4 HD
 		6532: 816, # ITV2 HD
-		6533: 817, # ITV3 HD
 		#slow death section
 		3705: 112, # ComedyCentral
 		2709: 127, # ComedyXtra

@@ -162,8 +162,8 @@ except:
 	}
 
 	channels_to_add_by_id = {
-		2012: 115, # BBC ALBA
-		6240: 118, # ITV2
+		3021: 115, # BBC ALBA HD
+		6532: 118, # ITV2 HD
 		6533: 119, # ITV3 HD
 		6534: 120, # ITV4 HD
 		6504: 128, # ITV HD
@@ -197,7 +197,7 @@ except:
 		2085: 503, # BBC News HD
 		3020: 504, # BBC Parliament HD
 		4075: 812, # Channel 4 HD
-		6532: 816, # ITV2 HD
+		2053: 970, # BBC RB
 		#slow death section
 		3705: 112, # ComedyCentral
 		2709: 127, # ComedyXtra
@@ -262,16 +262,6 @@ except:
 		5384: "TNT Sports 8",
 		5385: "TNT Sports 9",
 		5386: "TNT Sports 10",
-	}
-
-	BBC_RB = {
-		2051: ("BBC RB 1",0),
-		6002: ("BBC RB 2",1),
-		6003: ("BBC RB 3",2),
-		6004: ("BBC RB 4",3),
-		6005: ("BBC RB 5",4),
-		6006: ("BBC RB 6",5),
-		6007: ("BBC RB HD",6)
 	}
 
 	rename_by_id_conditional = { # channel ID: ("old name", "new name")

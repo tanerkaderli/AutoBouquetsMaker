@@ -337,14 +337,7 @@ except:
 	}
 
 	channels_to_add_by_id = {
-		1025: 296, # TV3+1
 		1285: 407, # SkySp Tennis
-		5153: 412, # Premier HD
-		5122: 421, # eir Sport 1 (also 3601)
-		5123: 424, # eir Sport 2 (also 4551)
-		5311: 428, # Premier Sports
-		5152: 460, # eir Sport 2 HD (also 5154)
-		1163: 873, # eir Sport 1 HD
 		#slow death section IRL alternatves
 		3705: 112, # ComedyCentral
 		2709: 127, # ComedyXtra
@@ -435,9 +428,6 @@ except:
 
 	whitelist_by_id = [
 		1003, # MUTV HD
-		1015, # LaLigaTV HD
-		1047, # Insight HD
-		1163, # eir Sport 1 HD
 		1372,
 		3080, # W HD
 		3077, # Alibi HD
@@ -446,9 +436,6 @@ except:
 		3831,
 		4039,
 		4056,
-		5152, # eir Sport 2 HD
-		5153, # Premier HD
-		5154, # eir Sport 2 HD
 		5272, # Racing UK HD
 	]
 

@@ -270,20 +270,14 @@ except:
 
 	whitelist_by_id = [
 		1003, # MUTV HD
-		1015, # LaLigaTV HD
-		1047, # Insight HD
-		1163, # eir Sport 1 HD
 		1372,
 		3080, # W HD
-		3077, # albia HD
+		3077, # Alibi HD
 		3078, # Dave HD
 		3812,
 		3831,
 		4039,
 		4056,
-		5152, # eir Sport 2 HD
-		5153, # Premier HD
-		5154, # eir Sport 2 HD
 		5272, # Racing UK HD
 	]
 

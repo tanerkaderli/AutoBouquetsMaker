@@ -272,7 +272,6 @@
 		<channel number="23" with="107"/>	<!-- BBC THREE HD -->
 		<channel number="201" with="204"/>	<!-- CBBC HD -->
 		<channel number="202" with="205"/>	<!-- CBeebies HD -->
-		<channel number="231" with="107"/>	<!-- BBC NEWS HD -->
 	</swapchannels>
 
 	<servicehacks>

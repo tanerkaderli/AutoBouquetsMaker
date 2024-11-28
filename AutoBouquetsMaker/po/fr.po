@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-28 13:10+0000\n"
-"PO-Revision-Date: 2023-05-31 08:23+0200\n"
+"POT-Creation-Date: 2024-11-28 13:15+0000\n"
+"PO-Revision-Date: 2024-11-27 15:06+0100\n"
 "Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
 "Language-Team: french-EGAMI\n"
 "Language: fr\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: iso-8859-15\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
@@ -23,7 +23,7 @@ msgstr "%a %e %b  %-H:%M"
 #: ../src/scanner/main.py:709
 #, python-format
 msgid "%s scheduled update"
-msgstr "%s programmation mise à jour"
+msgstr "Mise à jour programmée de %s"
 
 #: ../src/scanner/main.py:707
 #, python-format
@@ -31,8 +31,8 @@ msgid ""
 "%s update is about to start.\n"
 "Do you want to allow this?"
 msgstr ""
-"La mise à jour de %s est sur le point de démarrer.\n"
-"Voulez-vous autoriser cela ?"
+"%s est sur le point d'être mis à jour,\n"
+"Voulez-vous permettre cela ?"
 
 #: ../src/plugin.py:51 ../src/plugin.py:67
 msgid "---- ABM - 'text' ----"
@@ -72,7 +72,7 @@ msgstr "=== texte ==="
 
 #: ../src/scanner/frequencyfinder.py:142 ../src/scanner/frequencyfinder.py:147
 msgid "ABM frequency finder"
-msgstr "Chercheur de fréquence ABM"
+msgstr "Détecteur de fréquence ABM"
 
 #: ../src/menu.py:278
 msgid "ABM log file has been saved to the tmp directory"
@@ -88,7 +88,7 @@ msgstr "Ajouter des marqueurs de fournisseur"
 
 #: ../src/setup.py:497
 msgid "Add provider name to bouquets"
-msgstr "Ajouter le nom de l'opérateur aux bouquets"
+msgstr "Ajouter le nom du fournisseur aux bouquets"
 
 #: ../src/scanner/bouquetswriter.py:641
 msgid "All channels"
@@ -147,7 +147,7 @@ msgstr "Abandon"
 
 #: ../src/scanner/frequencyfinder.py:347 ../src/scanner/main.py:363
 msgid "Cannot allocate the demuxer."
-msgstr "Impossible d'allouer le demuxer."
+msgstr "Impossible d'allouer le démultiplicateur."
 
 #: ../src/scanner/frequencyfinder.py:322 ../src/scanner/main.py:334
 msgid "Cannot free NIM because a recording is in progress"
@@ -212,7 +212,7 @@ msgstr "Le fichier de configuration pour %s a été mis à jour."
 #: ../src/updateproviders.py:259
 #, python-format
 msgid "Config file for %s is faulty."
-msgstr "Le fichier de configuration pour %s est défectueux."
+msgstr "Le fichier de configuration de %s est défectueux."
 
 #: ../src/menu.py:88
 msgid "Configure"
@@ -220,7 +220,7 @@ msgstr "Configurer"
 
 #: ../src/setup.py:319
 msgid "Create FTA HD bouquet"
-msgstr "Créer bouquet HD FTA (en clair)"
+msgstr "Créer un bouquet HD en clair"
 
 #: ../src/setup.py:316
 msgid "Create FTA bouquet"
@@ -236,15 +236,15 @@ msgstr "Créer le bouquet principal"
 
 #: ../src/setup.py:310
 msgid "Create sections bouquets"
-msgstr "Créer des bouquets de sections"
+msgstr "Créer les bouquets sections"
 
 #: ../src/setup.py:307
 msgid "Custom bouquet for main"
-msgstr "Bouquet personnalisé comme principal"
+msgstr "Bouquet personnalisé pour le principal"
 
 #: ../src/menu.py:100
 msgid "DVB-T frequency finder"
-msgstr "Chercheur de fréquence DVB-T"
+msgstr "Détecteur de fréquences DVB-T"
 
 #: ../src/menu.py:97
 msgid "Delete ABM bouquets"
@@ -304,12 +304,12 @@ msgstr "Trouver des fournisseurs configurés..."
 #, python-format
 msgid "Found %d unique transponder"
 msgid_plural "Found %d unique transponders"
-msgstr[0] "%d transpondeur unique trouvé"
-msgstr[1] "%d transpondeurs unique trouvés"
+msgstr[0] "Trouvé %d transpondeur unique"
+msgstr[1] "Trouvé %d transpondeurs uniques"
 
 #: ../src/scanner/frequencyfinder.py:79
 msgid "FrequencyFinder"
-msgstr "ChercheurFréquence"
+msgstr "Recherche de fréquences"
 
 #: ../src/setup.py:573
 msgid "Friday"
@@ -329,11 +329,11 @@ msgstr "Si un service est affecté à un satellite qui n'est pas configuré, «o
 
 #: ../src/setup.py:492
 msgid "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan."
-msgstr "Si le récepteur est en 'Veille profonde' lorsque la programmation est due, réveillez-le pour effectuer une recherche."
+msgstr "Si le récepteur est en « veille profonde » au moment de la programmation, réveillez-le pour effectuer un balayage."
 
 #: ../src/setup.py:494
 msgid "If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed."
-msgstr "Si le récepteur a été réveillé de 'Veille profonde' et qu'il est actuellement en 'Veille' et qu'aucun enregistrement n'est en cours, remettez-le en 'Veille profonde' une fois la recherche terminée."
+msgstr "Si le récepteur a été réveillé de l'état de veille prolongée, qu'il est actuellement en état de veille et qu'aucun enregistrement n'est en cours, remettez-le en état de veille prolongée une fois que le balayage est terminé."
 
 #: ../src/setup.py:504
 msgid "Include 'not indexed' channels"
@@ -397,7 +397,7 @@ msgstr "Aucune zone trouvée"
 
 #: ../src/scanner/frequencyfinder.py:172
 msgid "No frequencies to search"
-msgstr "Aucune fréquence à rechercher"
+msgstr "Pas de fréquences à rechercher"
 
 #: ../src/updateproviders.py:131
 msgid "No providers are configured."
@@ -409,11 +409,11 @@ msgstr "Aucun fournisseur n'est configuré."
 
 #: ../src/scanner/frequencyfinder.py:216
 msgid "No terrestrial multiplexes found."
-msgstr "Aucun multiplex terrestre trouvé."
+msgstr "Aucun multiplex terrestre n'a été trouvé."
 
 #: ../src/scanner/frequencyfinder.py:239 ../src/scanner/frequencyfinder.py:257
 msgid "No terrestrial tuner found."
-msgstr "Aucune tuner terrestre trouvé"
+msgstr "Aucun tuner terrestre n'a été trouvé."
 
 #: ../src/scanner/frequencyfinder.py:304
 msgid "No valid NIM found for terrestrial."
@@ -421,7 +421,7 @@ msgstr "Aucun NIM valide n'a été trouvé pour le terrestre."
 
 #: ../src/scanner/frequencyfinder.py:213
 msgid "Only DVB-T2 multiplexes found. Insufficient data to create a provider file."
-msgstr "Seuls les multiplex DVB-T2 ont été trouvés. Données insuffisantes pour créer un fichier fournisseur."
+msgstr "Seuls des multiplex DVB-T2 ont été trouvés. Données insuffisantes pour créer un fichier fournisseur."
 
 #: ../src/setup.py:502
 msgid "Place bouquets at"
@@ -437,11 +437,11 @@ msgstr "Veuillez patientez..."
 
 #: ../src/plugin.py:28
 msgid "Press OK"
-msgstr "Appuyez sur OK"
+msgstr "Appuyer sur OK"
 
 #: ../src/setup.py:491
 msgid "Press OK to select which days to perform a scan."
-msgstr "Appuyez sur OK pour sélectionner les jours pour effectuer la recherche."
+msgstr "Appuyez sur OK pour sélectionner les jours où vous souhaitez effectuer une recherche."
 
 #: ../src/menu.py:89
 msgid "Providers"
@@ -458,7 +458,7 @@ msgstr "Chaînes radio"
 #: ../src/scanner/frequencyfinder.py:365
 #, python-format
 msgid "Reading %s MHz (ch %s)"
-msgstr "Lecture %s MHz (canal %s)"
+msgstr "Lecture %s MHz (ch %s)"
 
 #: ../src/scanner/main.py:446
 #, python-format
@@ -532,11 +532,11 @@ msgstr "Recherche de transpondeurs actifs"
 
 #: ../src/setup.py:491
 msgid "Schedule days of the week"
-msgstr "Planifier les jours de la semaine"
+msgstr "Programmer les jours de la semaine"
 
 #: ../src/setup.py:494
 msgid "Schedule return to deep standby"
-msgstr "Programmer le retour en veille profonde"
+msgstr "Programmer le retour à l'état de veille profonde"
 
 #: ../src/setup.py:488
 msgid "Schedule scan"
@@ -544,19 +544,19 @@ msgstr "Programmer un scan"
 
 #: ../src/setup.py:490
 msgid "Schedule time of day"
-msgstr "Planifier l'heure de la journée"
+msgstr "Programmation de l'heure de la journée"
 
 #: ../src/setup.py:492
 msgid "Schedule wake from deep standby"
-msgstr "Planifier le réveil à partir d'une veille profonde"
+msgstr "Programmation de la sortie de veille"
 
 #: ../src/setup.py:506
 msgid "Select \"yes\" to show the \"DVB-T frequency finder\" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc."
-msgstr "Sélectionnez « oui » pour afficher l'outil « Recherche de fréquence DVB-T » dans le menu principal. Cet outil est utilisé pour créer un fichier de fournisseur de travail pour les zones difficiles du Royaume-Uni, par ex. zones couvertes par des répéteurs, etc."
+msgstr "Sélectionnez « oui » pour afficher l'outil « Détecteur de fréquences DVB-T » dans le menu principal. Cet outil est utilisé pour créer un fichier fournisseur de travail pour les zones difficiles du Royaume-Uni, par exemple les zones couvertes par des répéteurs, etc."
 
 #: ../src/setup.py:569 ../src/setup.py:591
 msgid "Select days"
-msgstr "Sélectionnez des jours"
+msgstr "Sélectionner les jours"
 
 #: ../src/setup.py:307
 msgid "Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used."
@@ -578,11 +578,11 @@ msgstr "Services : 0 vidéo - 0 radio"
 
 #: ../src/setup.py:490
 msgid "Set the time of day to perform a scan."
-msgstr "Définir l'heure à laquelle la recherche doit être effectuée."
+msgstr "Définir l'heure à laquelle le balayage doit être effectué."
 
 #: ../src/setup.py:506
 msgid "Show DVB-T frequency finder"
-msgstr "Afficher le détecteur de fréquence DVB-T"
+msgstr "Afficher recherche de fréquences DVB-T"
 
 #: ../src/setup.py:507
 msgid "Show in extensions"
@@ -606,7 +606,7 @@ msgstr "Démarrage du scanner"
 
 #: ../src/scanner/frequencyfinder.py:160
 msgid "Starting search..."
-msgstr "Lancer la recherche…"
+msgstr "Commencer la recherche..."
 
 #: ../src/updateproviders.py:117
 msgid "Starting update..."
@@ -691,7 +691,7 @@ msgstr "Mardi"
 #: ../src/scanner/frequencyfinder.py:185
 #, python-format
 msgid "Tuning %s MHz (ch %s)"
-msgstr "Syntonisation %s MHz (canal %s)"
+msgstr "Accord %s MHz (ch %s)"
 
 #: ../src/scanner/main.py:206
 #, python-format
@@ -713,16 +713,16 @@ msgid ""
 "Signal cabling issues,\n"
 "Any other reception issues."
 msgstr ""
-"Le réglage a échoué !\n"
+"L'accord a échoué !\n"
 "\n"
-"Fournisseurs: %s\n"
-"Tuner: %s\n"
-"Fréquence : %dMHz\n"
+"Provider : %s\n"
+"Tuner : %s\n"
+"Fréquence : %d MHz\n"
 "\n"
-"Veuillez vérifier le tuner concerné pour :\n"
+"Veuillez vérifier le tuner concerné pour :\n"
 "\n"
-"erreurs de configuration du tuner,\n"
-"problèmes de câblage de signal,\n"
+"Erreurs de configuration du tuner,\n"
+"Problèmes de câblage du signal,\n"
 "Tout autre problème de réception."
 
 #: ../src/scanner/main.py:462
@@ -740,16 +740,16 @@ msgid ""
 "Signal cabling issues,\n"
 "Any other reception issues."
 msgstr ""
-"Le verrouillage du réglage a expiré !\n"
+"La durée du verrouillage de l'accord a expiré !\n"
 "\n"
-"Fournisseurs: %s\n"
-"Tuner: %s\n"
-"Fréquence : %dMHz\n"
+"Provider : %s\n"
+"Tuner : %s\n"
+"Fréquence : %d MHz\n"
 "\n"
-"Veuillez vérifier le tuner concerné pour :\n"
+"Veuillez vérifier le tuner concerné pour :\n"
 "\n"
-"erreurs de configuration du tuner,\n"
-"problèmes de câblage de signal,\n"
+"Erreurs de configuration du tuner,\n"
+"Problèmes de câblage du signal,\n"
 "Tout autre problème de réception."
 
 #: ../src/updateproviders.py:196
@@ -787,7 +787,7 @@ msgstr "Lorsque cette option est activée, elle vous permet de lancer une analys
 
 #: ../src/plugin.py:71
 msgid "bottom"
-msgstr "Bas"
+msgstr "fond"
 
 #: ../src/plugin.py:17
 msgid "expert"
@@ -803,7 +803,7 @@ msgstr "non"
 
 #: ../src/plugin.py:41 ../src/plugin.py:57
 msgid "none"
-msgstr "Aucun"
+msgstr "aucun"
 
 #: ../src/plugin.py:17
 msgid "simple"
@@ -811,7 +811,7 @@ msgstr "simple"
 
 #: ../src/plugin.py:71
 msgid "top"
-msgstr "Haut"
+msgstr "sommet"
 
 #: ../src/setup.py:243
 msgid "yes"

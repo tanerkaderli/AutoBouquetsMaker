@@ -361,17 +361,7 @@ except:
 	}
 
 	itv_rename = {
-		1020: "ITV1 Border Scotland",
-		6000: "ITV1 London",
-#		6020: "ITV1 Wales",	#This is correct on stream, no need for rename.
-		6130: "ITV1 Granada",
-		6142: "ITV1 Meridian East",
-		6200: "ITV1 Channel Isles",
 		6210: "STV North",
-		6220: "STV West",
-#		6230: "UTV",	#This is correct on stream, no need for rename.
-		6300: "ITV1 Central West",
-		6325: "STV Tayside",
 		6371: "STV East",
 
 		# +1 Channels
@@ -387,9 +377,6 @@ except:
 		1061: "ITV1 Border England HD",
 		1062: "ITV1 West Country SW HD",
 		1063: "ITV1 West Country West HD",
-		1167: "STV Dundee HD",
-		1168: "STV North HD",
-		1170: "STV East HD",
 		1208: "ITV1 Meridian Thames Valley HD",
 		1209: "ITV1 Meridian South Coast HD",
 		1214: "ITV1 Yorkshire East HD",
@@ -397,12 +384,17 @@ except:
 		1219: "ITV1 Central East HD",
 		3062: "ITV1 Channel Isles HD",
 		3063: "ITV1 Border Scotland HD",
-		4055: "STV West HD",
 #		6501: "ITV1 Wales HD",	#This is correct on stream, no need for rename.
 		6502: "ITV1 Meridian East HD",
 		6503: "ITV1 Central West HD",
 		6504: "ITV1 London HD",
 		6505: "ITV1 Granada HD",
+
+		1167: "STV Dundee HD",
+		1168: "STV North HD",
+		1170: "STV East HD",
+		4055: "STV West HD",
+
 #		6510: "UTV HD",	#This is correct on stream, no need for rename.
 	}
 

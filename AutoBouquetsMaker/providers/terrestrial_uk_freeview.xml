@@ -7,7 +7,7 @@
 		<configuration key="beacon_hill________" frequency="785800000">Beacon Hill</configuration>
 		<configuration key="belmont____________" frequency="506000000">Belmont</configuration>
 		<configuration key="berks_north_hants__" frequency="642000000">Berks and North Hants</configuration>
-		<configuration key="bilsdale___________" frequency="674000000">Bilsdale</configuration>
+		<configuration key="bilsdale___________" frequency="522000000">Bilsdale</configuration>
 		<configuration key="black_hill_________" frequency="674000000">Black Hill</configuration>
 		<configuration key="blaenplwyf_________" frequency="522000000">Blaenplwyf</configuration>
 		<configuration key="bluebell_hill______" frequency="562000000">Bluebell Hill</configuration>

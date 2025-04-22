@@ -43,7 +43,7 @@
 		<configuration key="sd_24735" bouquet="0x609f" region="0xe2">D-SMART - OTELLER PLUS</configuration>
 	</dvbsconfigs>
 	<sections>
-		<section number="1">D-SMART - HD</section>
+		<section number="1">D-Smart</section>
 	</sections>
 	<servicehacks>
 <![CDATA[
